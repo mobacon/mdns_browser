@@ -8,7 +8,8 @@ class MainApplication(object):
     def __init__(self):
 
         self._root = Tk() # create a top-level window
-
+        self._root.iconbitmap("mobacon.ico")
+            
         self._master = Frame(self._root, name='master') # create Frame in "root"
         self._master.pack(fill=BOTH) # fill both sides of the parent
 
