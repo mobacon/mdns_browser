@@ -3,12 +3,24 @@ from Tkinter import *
 import ttk
 import socket
 
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    import os, sys
+    try:
+        # PyInstaller creates a temp folder and stores path in _MEIPASS
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
+
+
 class MainApplication(object):
 
     def __init__(self):
-
+        import sys
         self._root = Tk() # create a top-level window
-        self._root.iconbitmap("mobacon.ico")
+        self._root.iconbitmap(resource_path("mobacon.ico"))
 
         self._root.title('Scanning for MDNS devices with HTTP service') # title for top-level window       
         self._tree = ttk.Treeview(self._root, height="10", show="headings", padding=3, selectmode="browse")
