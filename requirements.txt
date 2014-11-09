@@ -1,0 +1,4 @@
+zeroconf>=0.15.1
+pylint
+ttk
+PyInstaller

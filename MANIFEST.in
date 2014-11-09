@@ -1,0 +1,6 @@
+include README
+include setup.py
+include mdns_browser.py
+include mobacon.ico
+include mdns_broser.spec
+include build.bat
