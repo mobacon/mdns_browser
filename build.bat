@@ -1,0 +1,1 @@
+pyinstaller mdns_browser.spec
