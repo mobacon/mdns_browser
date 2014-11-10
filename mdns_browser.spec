@@ -1,12 +1,9 @@
 # -*- mode: python -*-
-a = Analysis(['mdns_browser.py'],
-             pathex=['I:\\mdns_browser'],
+a = Analysis(['src\\mdns_browser.py'],
+             pathex=['mdns_browser'],
              hiddenimports=[],
              hookspath=None,
              runtime_hooks=None)
-
-a.datas += [ ('mobacon.ico', './mobacon.ico', 'DATA')]
-
 pyz = PYZ(a.pure)
 exe = EXE(pyz,
           a.scripts,
@@ -17,4 +14,4 @@ exe = EXE(pyz,
           debug=False,
           strip=None,
           upx=True,
-          console=False)
+          console=False , icon='favicon.ico')
